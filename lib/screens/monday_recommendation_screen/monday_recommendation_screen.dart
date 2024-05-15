@@ -23,78 +23,80 @@ class MondayRecommendationScreen extends StatelessWidget {
                 Colors.black
               ]),
         ),
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, 'RadioScreen');
-                      },
-                      icon: const Icon(
-                        Icons.arrow_back_ios_new_rounded,
-                        color: Colors.white,
-                      ),
-                    ),
-                    Image.asset('assets/images/userprofile.png')
-                  ],
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Image.asset('assets/images/play_button.png'),
-                        Row(
-                          children: [
-                            Image.asset('assets/images/share.png'),
-                            const SizedBox(width: 10),
-                            Image.asset('assets/images/playlist.png'),
-                            const SizedBox(width: 10),
-                            Image.asset('assets/images/shuffle.png'),
-                            const SizedBox(width: 10),
-                          ],
+        child: SingleChildScrollView(
+          child: SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'RadioScreen');
+                        },
+                        icon: const Icon(
+                          Icons.arrow_back_ios_new_rounded,
+                          color: Colors.white,
                         ),
-                      ],
-                    ),
-                    const SizedBox(height: 40),
-                    Row(
-                      children: [
-                        Text(
-                          'Monday Playlist',
-                          style: GoogleFonts.inter(
-                            fontSize: 24,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.white,
+                      ),
+                      Image.asset('assets/images/userprofile.png')
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Image.asset('assets/images/play_button.png'),
+                          Row(
+                            children: [
+                              Image.asset('assets/images/share.png'),
+                              const SizedBox(width: 10),
+                              Image.asset('assets/images/playlist.png'),
+                              const SizedBox(width: 10),
+                              Image.asset('assets/images/shuffle.png'),
+                              const SizedBox(width: 10),
+                            ],
                           ),
-                        ),
-                        const SizedBox(width: 10),
-                        Image.asset('assets/images/like.png'),
-                      ],
-                    ),
-                    const SizedBox(height: 10),
-                    Text(
-                      'Risus pretium velit amet vel tincidunt.',
-                      style: GoogleFonts.inter(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white,
+                        ],
                       ),
-                    ),
-                    const SizedBox(height: 20),
-                    const MusicColumn(),
-                    const SizedBox(height: 20),
-                    const CustomBottomNavBar(),
-                  ],
-                ),
-              ],
+                      const SizedBox(height: 40),
+                      Row(
+                        children: [
+                          Text(
+                            'Monday Playlist',
+                            style: GoogleFonts.inter(
+                              fontSize: 24,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white,
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          Image.asset('assets/images/like.png'),
+                        ],
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        'Risus pretium velit amet vel tincidunt.',
+                        style: GoogleFonts.inter(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      const MusicColumn(),
+                      const SizedBox(height: 20),
+                      const CustomBottomNavBar(),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),
