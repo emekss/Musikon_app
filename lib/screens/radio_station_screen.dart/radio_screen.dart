@@ -24,39 +24,42 @@ class RadioScreen extends StatelessWidget {
         ),
         child: SingleChildScrollView(
           child: SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Image.asset('assets/images/bi_search.png'),
-                      Image.asset('assets/images/userprofile.png')
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Image.asset('assets/images/bi_search.png'),
+                          Image.asset('assets/images/userprofile.png')
+                        ],
+                      ),
+                      Text(
+                        'Radio Station',
+                        style: GoogleFonts.inter(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      const RadioStation(),
+                      const SizedBox(height: 20),
+                      const RadioStation(),
+                      const SizedBox(height: 20),
+                      const RadioStation(),
+                      const SizedBox(height: 20),
+                      const RadioStation(),
                     ],
                   ),
-                  Text(
-                    'Radio Station',
-                    style: GoogleFonts.inter(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.white,
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  const RadioStation(),
-                  const SizedBox(height: 20),
-                  const RadioStation(),
-                  const SizedBox(height: 20),
-                  const RadioStation(),
-                  const SizedBox(height: 20),
-                  const RadioStation(),
-                  const SizedBox(height: 20),
-                  const CustomBottomNavBar(),
-                ],
-              ),
+                ),
+                const CustomBottomNavBar(),
+              ],
             ),
           ),
         ),
