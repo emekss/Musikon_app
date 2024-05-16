@@ -41,7 +41,7 @@ class MondayRecommendationScreen extends StatelessWidget {
                               Navigator.pushNamed(context, 'RadioScreen');
                             },
                             icon: const Icon(
-                              Icons.arrow_back,
+                              Icons.arrow_back_ios_rounded,
                               color: Colors.white,
                             ),
                           ),
